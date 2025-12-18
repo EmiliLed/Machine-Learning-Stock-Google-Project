@@ -4,8 +4,8 @@ import pandas as pd
 from statsmodels.tsa.seasonal import STL
 from sklearn.preprocessing import StandardScaler, RobustScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-
-path=r"C:\\Users\\zu154553\\Downloads\\GOOGL_2006-01-01_to_2018-01-01(2).csv"
+# edit this for ur needs
+path=r"GOOGL_2006-01-01_to_2018-01-01(2).csv"
 def get_sequences_3 (data,dates_data,input_length,output_length,goal_col="Close",trend_col="Trend",seaonal_col="Seaonal",autogression=False):
     # seperate trand incoporation
     X = []
@@ -339,3 +339,4 @@ def calculate_metrics(actuals_fval, predictions_fval,save=False):
     print(f"RMSE: {rmse:.2f}")
 
     print(f"R2: {r2:.2f}%")
+
